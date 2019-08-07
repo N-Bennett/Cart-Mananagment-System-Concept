@@ -4,15 +4,31 @@
 #a status message in the serial monitor
 
 import array as CartStatus
+import time
 
 #Initilize array to house the status of carts 1,2, and 3
-CartStatus = CartStatus.array('i', [0, 0, 0])
+CartStat = CartStatus.array('i', [1, 1, 1])
 
-#loop that evaluates the status of each cart
-#A message displaying the carts status will be sent depending
-#on the position of a switch
-for x in range(0, 4):
-    if CartSatus[x,1] == 0
-    print('Cart {0} is ready to be picked up')
-    else
-    print('Cart {0} is beind used')
+#0 = needs to be picked up
+#1 = is being used
+
+#While Loop Maintains constant communication to user
+while True:
+    #loop that evaluates the status of each cart
+    #A message displaying the carts status will be sent depending
+    #on the position of a switch
+    for x in range(1, 4, 1):
+   
+     #print(CartStat[x-1])
+     #print('')
+    
+     if CartStat[x-1] == 0:
+      print('Cart {:3d} is ready to be picked up'.format(x))
+     else:
+       print('Cart {:3d} is beind used'.format(x))
+
+    print('')
+    
+    #Amount of delay in the system
+    #update delay to be a value from pot
+    time.sleep(5)
