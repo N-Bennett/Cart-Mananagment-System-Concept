@@ -1,1 +1,18 @@
+#Test code that detects the position of 3 switches that
+#allow machine operators to relay if they need work to
+#"runners". This test recives user input and then sends
+#a status message in the serial monitor
 
+import array as CartStatus
+
+#Initilize array to house the status of carts 1,2, and 3
+CartStatus = CartStatus.array('i', [0, 0, 0])
+
+#loop that evaluates the status of each cart
+#A message displaying the carts status will be sent depending
+#on the position of a switch
+for x in range(0, 4):
+    if CartSatus[x,1] == 0
+    print('Cart {0} is ready to be picked up')
+    else
+    print('Cart {0} is beind used')
